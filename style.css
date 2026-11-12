@@ -1,0 +1,405 @@
+@font-face {
+    font-family: font1;
+    src: url(./fonts/RedditSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(./fonts/RedditSans-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: font3;
+    src: url(./fonts/RedditSans-Bold.ttf);
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.landing-page, .voting-page, .about-page {
+    scroll-snap-align: start;
+}
+
+body{
+    cursor: url('./medias/titre.svg'), 16 16, auto;
+
+    font-family: font1;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+a{
+    text-decoration: none;
+    color: rgba(201, 180, 216, 1);
+}
+
+h4 {
+    color: rgba(201, 180, 216, 1);
+    margin: 0px;
+    width: 30%;
+    text-align: center;
+
+    text-transform:uppercase;
+}
+
+.landing-page {
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #F8F1FF;
+    background: linear-gradient(0deg,
+    rgba(182, 190, 135, 1) 2%, 
+    rgba(201, 180, 216, 1) 13%, 
+    rgba(248, 241, 255, 1) 100%);
+}
+
+
+
+.button-placement-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.menu {
+
+    width: 100%;
+    padding: 16px 24px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.menu h4:first-child {
+    text-align: left;
+}
+
+.menu h4:nth-child(2) {
+    text-align: center;
+}
+
+.menu h4:last-child {
+    text-align: right;
+}
+
+.logo {
+    position: absolute;
+    top: 46%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+}
+
+button {
+    position: absolute;
+    bottom: 56px;
+
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgba(201, 180, 216, 1);
+
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(248, 241, 255, 1);
+
+    padding: 12px 24px;
+}
+
+button:hover {
+    color: #645e31FF;
+    box-shadow: 0px 0px 50px 0px #645e31FF;
+}
+
+.voting-page {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 3%; 
+
+    padding: 0px 32px;
+    box-sizing: border-box;
+
+    background: #F8F1FF;
+    background: linear-gradient(0deg, 
+    rgba(248, 241, 255, 1) 30%,
+    rgba(182, 190, 135, 1) 100%);
+}
+
+.cards-row {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 5%; 
+    box-sizing: border-box;
+    width: 100%; 
+}
+
+.cards-row .cards {
+    width: 350px; 
+    aspect-ratio: 2 / 3; 
+
+    border-radius: 30px;
+    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    position: relative; 
+    overflow: hidden; 
+
+    cursor: pointer;
+}
+
+.cards:hover {
+    color: #645e31FF;
+    box-shadow: 0px 0px 50px 0px #645e31FF;
+
+}
+
+.film1 {
+    background-image: url(./medias/film1.jpeg);
+}
+
+.film2 {
+    background-image: url(./medias/film2.jpg);
+}
+
+.film3 {
+    background-image: url(./medias/film3.webp);
+}
+
+
+
+.film-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background-color: rgba(248, 241, 255);
+    color: #645e31;
+    
+    padding: 24px 24px; 
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px; 
+    
+    opacity: 0;
+}
+
+.cards-row .cards:hover .film-info {
+    opacity: 1;
+}
+
+.cards-first-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:fit-content;
+}
+
+.cards-first-line p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.film-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.film-info h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 42px;
+    line-height: 42px;
+
+    text-align: left;
+}
+
+.film-info h6 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.synopsis {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+.film-info .btn-trailer {
+    position: static; 
+    margin-top: auto; 
+    align-self: center; 
+    
+    width: 100%; 
+    padding: 12px 24px;
+    box-sizing: border-box;
+    
+    background-color: rgba(182, 190, 135, 1);
+    color: rgba(248, 241, 255, 1); 
+    
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+
+    display: block; 
+    text-align: center; 
+    text-decoration: none; 
+}
+
+.film-info .btn-trailer:hover {
+    box-shadow: none;
+    background-color: rgba(201, 180, 216, 1);
+}
+
+h1 {
+    color: #645e31;
+}
+
+
+.about-page {
+
+    background: linear-gradient(0deg, 
+    rgba(201, 180, 216, 1) 1%,
+    rgba(248, 241, 255, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-page p {
+    margin: 0px;
+    padding: 100px 16px;
+    width: 60%;
+
+    color: #645e31;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-page a {
+    color: #645e31;
+    font-family: font3;
+}
+
+.about-page a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* SMARTPHONE MODE PORTRAIT */
+@media screen and (max-width: 768px) {
+
+
+    .menu {
+        flex-direction: column; 
+        gap: 4px;
+    }
+    
+    .menu h4 {
+        width: 100%;
+        text-align: center !important; 
+        font-size: 14px;
+    }
+    
+    .logo {
+        width: 90%; 
+    }
+
+    .about-page p {
+        width: 90%;
+        padding: 40px 16px;
+    }
+
+    .voting-page h1 {
+        font-size: 24px;
+        text-align: center;
+        padding: 0 16px;
+        margin-bottom: 10px;
+    }
+
+
+    .cards-row {
+        justify-content: flex-start; 
+
+        gap: 16px;
+        
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory; 
+        
+
+        scrollbar-width: none; 
+    }
+    
+    .cards-row::-webkit-scrollbar {
+        display: none; 
+    }
+
+
+    .cards-row .cards {
+        flex: 0 0 auto; 
+        width: 75vw; 
+        max-width: 300px;
+        scroll-snap-align: center; 
+    }
+
+    .cards-row .cards:hover {
+        box-shadow: 0px 0px 0px 0px;
+    }
+
+
+    .cards-row .cards .film-info {
+        opacity: 1; 
+        background: transparent; 
+    }
+
+
+    .cards-first-line, .film-titles, .synopsis {
+        display: none; 
+    }
+
+
+    .film-info .btn-trailer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; 
+        border-radius: 30px; 
+        padding: 0;
+    }
+}
