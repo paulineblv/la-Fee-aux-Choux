@@ -126,34 +126,11 @@ button:hover {
     box-shadow: 0px 0px 50px 0px #645e31FF;
 }
 
-.voting-page {
-    height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    gap: 3%; 
 
-    padding: 0px 32px;
-    box-sizing: border-box;
 
-    background: #F8F1FF;
-    background: linear-gradient(0deg, 
-    rgba(248, 241, 255, 1) 30%,
-    rgba(182, 190, 135, 1) 100%);
-}
 
-.cards-row {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 5%; 
-    box-sizing: border-box;
-    width: 100%; 
-}
-
-.cards-row .cards {
+.cards {
     width: 350px; 
     aspect-ratio: 2 / 3; 
 
@@ -171,8 +148,33 @@ button:hover {
 
 .cards:hover {
     color: #645e31FF;
-    box-shadow: 0px 0px 50px 0px #645e31FF;
+    box-shadow: 0px 0px 50px 0px rgba(182, 190, 135, 1);
 
+}
+
+.carte-centre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+    
+
+    width: 300px; 
+    aspect-ratio: 2 / 3; 
+    border-radius: 30px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+
+    box-shadow: 0px 0px 50px 0px rgba(182, 190, 135, 1);
+}
+
+
+.carte-centre:hover .film-info {
+    opacity: 1;
 }
 
 .film1 {
@@ -287,9 +289,7 @@ h1 {
 
 .about-page {
 
-    background: linear-gradient(0deg, 
-    rgba(201, 180, 216, 1) 1%,
-    rgba(248, 241, 255, 1) 100%);
+    background:  rgba(182, 190, 135, 1) 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -314,6 +314,22 @@ h1 {
 
 .about-page a:hover {
     text-decoration: underline;
+}
+
+.mention-affiche {
+    position: absolute;
+    bottom: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    margin: 0;
+    color: #645e31; 
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 8px 24px;
+    border-radius: 50px;
 }
 
 
@@ -401,5 +417,25 @@ h1 {
         opacity: 0; 
         border-radius: 30px; 
         padding: 0;
+    }
+
+    .carte-centre {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10; 
+        
+    
+        width: 250px; 
+        aspect-ratio: 2 / 3; 
+        border-radius: 30px;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        overflow: hidden;
+        
+    
+        box-shadow: 0px 0px 50px 0px rgba(182, 190, 135, 1);
     }
 }
